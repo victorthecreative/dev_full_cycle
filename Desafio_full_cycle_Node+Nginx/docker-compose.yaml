@@ -16,7 +16,8 @@ services:
     depends_on:
       - db
     volumes:
-      - ./node:/app 
+      - /app/node_modules
+      - ./node:/app
 
   db:
     image: mysql:5.7
@@ -47,4 +48,3 @@ services:
 networks:
   node-network:
     driver: bridge
-
